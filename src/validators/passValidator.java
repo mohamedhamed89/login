@@ -19,7 +19,7 @@ public class passValidator implements Validator {
 		String password = arg2.toString();
 		UIInput UConfirmedPassword = (UIInput)arg1.getAttributes().get("confirmPassword");
 		String confirmedPassword = UConfirmedPassword.getSubmittedValue().toString();
-		if(password.length()<4 || confirmedPassword.length()<4){
+		if(password.length()<=4 || confirmedPassword.length()<=4){
 			
 			throw new ValidatorException(new FacesMessage("Password must be more than 4 Character"));
 		}

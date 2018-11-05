@@ -148,8 +148,14 @@ public void setYear(String year) {
 		
 	}
 	
-	private static HashMap<String ,String> monthValue;
-	static{
+	private  HashMap<String ,String> monthValue;
+	
+		
+		
+		
+		
+	
+	public HashMap<String , String> getMonthValue(){
 		monthValue = new HashMap<String , String>();
 		monthValue.put("January", "January");
 		monthValue.put("Februry", "Februry");
@@ -163,12 +169,6 @@ public void setYear(String year) {
 		monthValue.put("October", "October");
 		monthValue.put("Novemebr", "Novemebr");
 		monthValue.put("December", "December");
-		
-		
-		
-	}
-	public HashMap<String , String> getMonthValue(){
-		
 		return monthValue;
 	}
 	
@@ -176,10 +176,10 @@ public void setYear(String year) {
 	
 	public String doRegister(){
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", username);
-		if(username.equals("mohamed")){
+		
 		return "m";
-		}else
-	return"n";
+
+
 	
 	}
 }
