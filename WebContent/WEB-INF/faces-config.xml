@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	
+	
+	<navigation-rule>
+		<from-view-id>login.xhtml</from-view-id>
+		<navigation-case>
+
+			<from-outcome>y</from-outcome>
+			<to-view-id>moh.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+
+			<from-outcome>n</from-outcome>
+			<to-view-id>registered.xhtml</to-view-id>
+		</navigation-case>
+		 
+		
+
+	</navigation-rule>
+	<navigation-rule>
+	<from-view-id>registered.xhtml</from-view-id>
+	<navigation-case>
+	<from-outcome>m</from-outcome>
+	<to-view-id>moh.xhtml</to-view-id>
+	
+	</navigation-case>
+<navigation-case>
+	<from-outcome>n</from-outcome>
+	<to-view-id>amr.xhtml</to-view-id>
+	
+	</navigation-case>
+	 
+	</navigation-rule>
+	<navigation-rule>
+	<from-view-id>amr.xhtml</from-view-id>
+	<navigation-case>
+	<from-outcome>logout</from-outcome>
+	<to-view-id>login.xhtml</to-view-id>
+	
+	</navigation-case>
+	</navigation-rule>
+	
+</faces-config>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:login.xhtml" PATH="login.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:login.xhtml:0" NAME="item" PATH="login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="y::moh.xhtml" NAME="output" PATH="moh.xhtml"
+    TARGET="rules:moh.xhtml" TITLE="y" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="n::registered.xhtml" NAME="output1"
+    PATH="registered.xhtml" TARGET="rules:registered.xhtml" TITLE="n" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:registered.xhtml" PATH="registered.xhtml"
+  SHAPE="256,177,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:registered.xhtml:0" NAME="item"
+   PATH="registered.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="m::moh.xhtml" NAME="output" PATH="moh.xhtml"
+    TARGET="rules:moh.xhtml" TITLE="m" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="n::amr.xhtml" NAME="output1"
+    PATH="amr.xhtml" TARGET="rules:amr.xhtml" TITLE="n" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:moh.xhtml" PATH="moh.xhtml"
+  SHAPE="464,161,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:amr.xhtml" PATH="amr.xhtml"
+  SHAPE="480,305,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:amr.xhtml:0" NAME="item" PATH="amr.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logout::login.xhtml" NAME="output"
+    PATH="login.xhtml" TARGET="rules:login.xhtml" TITLE="logout" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

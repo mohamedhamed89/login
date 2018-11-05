@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<title>moh. photo</title>
+</h:head> 
+<body> 
+<fieldset>
+<legend>My Photo</legend>
+<h:panelGrid columns="3">
+<h:graphicImage library="image" name="IMAG1120.jpg" title="mohameds Photo" alt="moh. photo" width="150" height="150"/>
+<h:graphicImage library="image" name="IMAG1121.jpg" title="mohameds Photo" alt="moh. photo" width="150" height="150"/>
+<h:graphicImage library="image" name="IMAG1123.jpg" title="mohameds Photo" alt="moh. photo" width="150" height="150"/>
+<h:graphicImage library="image" name="IMAG1128.jpg" title="mohameds Photo" alt="moh. photo" width="150" height="150"/>
+<h:graphicImage library="image" name="IMAG1137.jpg" title="mohameds Photo" alt="moh. photo" width="150" height="150"/>
+<h:graphicImage library="image" name="IMAG1139.jpg" title="mohameds Photo" alt="moh. photo" width="150" height="150"/>
+
+
+</h:panelGrid>
+<br />
+<h:form>
+<h:commandButton action="#{logoutBean.logout()}" value="LogOut" />
+
+</h:form>
+</fieldset>
+</body> 
+</html>
