@@ -148,14 +148,8 @@ public void setYear(String year) {
 		
 	}
 	
-	private  HashMap<String ,String> monthValue;
-	
-		
-		
-		
-		
-	
-	public HashMap<String , String> getMonthValue(){
+	private static HashMap<String ,String> monthValue;
+	static{
 		monthValue = new HashMap<String , String>();
 		monthValue.put("January", "January");
 		monthValue.put("Februry", "Februry");
@@ -169,6 +163,12 @@ public void setYear(String year) {
 		monthValue.put("October", "October");
 		monthValue.put("Novemebr", "Novemebr");
 		monthValue.put("December", "December");
+		
+		
+		
+	}
+	public HashMap<String , String> getMonthValue(){
+		
 		return monthValue;
 	}
 	
