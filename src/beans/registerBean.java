@@ -1,10 +1,16 @@
 package beans;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.HashMap;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+
+import com.mysql.jdbc.Connection;
+
+import connection.DBConnection;
 
 @ManagedBean(name="registerBean")
 @SessionScoped
@@ -174,10 +180,22 @@ public void setYear(String year) {
 	
 	//register method
 	
-	public String doRegister(){
+	public String doRegister() throws ClassNotFoundException, SQLException{
+		
+		String date = Month + "/" + day + "/" +year ;
+		String Add = countery + "-" + city ;
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", username);
 		
-		return "m";
+		Connection conn = (Connection) DBConnection.getConnction();
+		PreparedStatement ps = conn.prepareStatement("insert into login values (?,?,?,?,?,?)");
+	     ps.setString(1, username);
+	     ps.setString(2, password);
+	     ps.setString(3, gender);
+	     ps.setString(4, Add);
+	     ps.setString(5, email);
+	     ps.setString(6, date);
+	     ps.executeUpdate();
+	     return "m";
 
 
 	
